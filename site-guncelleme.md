@@ -8,6 +8,7 @@
 
 ## Güncel yerel çalışma
 
+- Sayfalara sabit WhatsApp iletişim düğmesi eklendi; `+32 465 75 82 40` numarasına Felemenkçe hazır mesajla bağlanıyor.
 - Site dili `nl-BE` olarak belirlendi; site kopyasındaki “boekbandmarkers” terimi kaldırıldı.
 - Her tasarım kitap ayracı €4,50. Bir siparişte 1–4 kitap ayracı için kargo €2,50; 5 veya daha fazla için ücretsiz.
 - Sepet miktar artırma/azaltma ve ürün silmeyi, canlı ara toplam/kargo/toplamı, ücretsiz kargo ilerlemesini ve localStorage kalıcılığını destekliyor.

@@ -933,6 +933,45 @@ blockquote footer {
   overflow: hidden;
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 15;
+  display: inline-flex;
+  min-width: 56px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 17px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #075e3b;
+  box-shadow: 0 8px 24px rgba(7, 94, 59, 0.3);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(7, 94, 59, 0.38);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
 .footer-cookie-link {
   min-height: 44px;
   padding: 8px 12px;
@@ -1366,6 +1405,23 @@ blockquote footer {
     inset: auto 10px 10px;
     grid-template-columns: 1fr;
     padding: 18px;
+  }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 56px;
+    min-width: 56px;
+    padding: 10px;
+  }
+
+  .whatsapp-float span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 
   .cookie-actions,

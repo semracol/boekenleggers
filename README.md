@@ -22,6 +22,7 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 - `assets/logo.svg`, `assets/logo-mark.svg`, `assets/logo-mark-mono.svg`, `assets/favicon.svg` — logo en favicon
 - `assets/fonts/` — lokaal gehoste Baloo 2- en Inter-lettertypen met OFL-licenties
 - `assets/products/` — Etsy klasöründen seçilen dört ürün fotoğrafı
+- WhatsApp-contactknop op de winkel- en juridische pagina's, gekoppeld aan `+32 465 75 82 40`
 
 ## Seçilen tasarım yönü
 
