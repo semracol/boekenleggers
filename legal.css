@@ -1,0 +1,164 @@
+.legal-main {
+  max-width: 880px;
+  min-height: 60vh;
+  padding-top: 54px;
+  padding-bottom: 76px;
+}
+
+.legal-main h1,
+.legal-main h2 {
+  font-family: "Baloo 2", cursive;
+  line-height: 1.1;
+}
+
+.legal-main h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+}
+
+.legal-main h2 {
+  margin: 34px 0 10px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.legal-main p,
+.legal-main li {
+  color: #344456;
+  line-height: 1.75;
+}
+
+.legal-main li {
+  margin: 8px 0;
+}
+
+.legal-main a {
+  color: #812d24;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-updated {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.legal-notice {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border: 1px solid #c58b36;
+  border-left: 6px solid #9c4b12;
+  border-radius: 12px;
+  background: #fff3d8;
+  color: #352818;
+  line-height: 1.6;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.legal-main table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.legal-main th,
+.legal-main td {
+  padding: 12px;
+  border: 1px solid #dfcbb5;
+  text-align: left;
+  vertical-align: top;
+  color: #253548;
+}
+
+.legal-main th {
+  background: #fff1d7;
+}
+
+.legal-main code,
+.withdrawal-form {
+  overflow-wrap: anywhere;
+}
+
+.withdrawal-form {
+  padding: 20px;
+  border: 1px solid #dfcbb5;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #253548;
+  font: 0.95rem/1.7 "Inter", sans-serif;
+  white-space: pre-wrap;
+}
+
+.company-details {
+  display: grid;
+  gap: 0;
+  margin: 24px 0;
+}
+
+.company-details div {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) 1.2fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #ead7c2;
+}
+
+.company-details dt {
+  font-weight: 800;
+}
+
+.company-details dd {
+  margin: 0;
+  color: #344456;
+  overflow-wrap: anywhere;
+}
+
+.legal-home-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: #344456;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.legal-footer {
+  display: grid;
+  gap: 14px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.legal-footer p {
+  margin: 0;
+  color: #455566;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.legal-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: #344456;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .legal-main {
+    padding-top: 34px;
+  }
+
+  .company-details div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

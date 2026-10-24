@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-BE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,31 +7,38 @@
       name="description"
       content="Kleurrijke boekenleggers voor €4,50 per stuk. Verzending voor €2,50 naar België en Nederland."
     />
+    <link rel="canonical" href="https://semracol.github.io/boekenleggers/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Boekenleggers.be | Kleurrijke boekenleggers" />
+    <meta property="og:description" content="Vrolijke boekenleggers voor €4,50. Gratis verzending vanaf vijf stuks in België en Nederland." />
+    <meta property="og:url" content="https://semracol.github.io/boekenleggers/" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <title>Boekenleggers.be | Kleurrijke boekenleggers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/baloo-2-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="topbar">
       <div class="container nav-wrap">
-        <div class="brand" aria-label="Boekenleggers home">
-          <span class="brand-mark">B</span>
+        <a class="brand" href="#" aria-label="Boekenleggers — startpagina">
+          <img src="assets/logo-mark.svg" alt="" width="44" height="44" />
           <span>Boekenleggers</span>
-        </div>
+        </a>
         <nav class="main-nav" aria-label="Hoofdnavigatie">
           <a href="#collectie">Collectie</a>
-          <a href="#gift-box">Gift sets</a>
+          <a href="#gift-box">Cadeaubox</a>
           <a href="#about">Over ons</a>
           <a href="#shipping">Verzending</a>
         </nav>
-        <button class="cart-pill" aria-label="Winkelmandje">
-          <span>Winkelmand</span>
-          <span class="cart-count" id="cartCount">0</span>
+        <button class="cart-pill" aria-haspopup="dialog" aria-controls="cartPanel" aria-expanded="false">
+          <svg class="cart-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+            <path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            <circle cx="10" cy="20" r="1.5" fill="currentColor" />
+            <circle cx="18" cy="20" r="1.5" fill="currentColor" />
+          </svg>
+          <span>Winkelmandje</span>
+          <span class="cart-count" id="cartCount" aria-live="polite" aria-atomic="true">0</span>
         </button>
       </div>
     </header>
@@ -40,19 +47,19 @@
       <section class="hero container">
         <div class="hero-copy">
           <p class="eyebrow">Kleurrijk • gezellig • cadeau-ready</p>
-          <h1>Maak elke pagina een klein feestje.</h1>
+          <h1 id="heroTitle">Maak elke pagina een klein feestje.</h1>
           <p class="lead">
-            Van zachte bloemen tot vrolijke illustraties: onze boekbandmarkers zijn
+            Van zachte bloemen tot vrolijke illustraties: onze boekenleggers zijn
             ontworpen om met liefde te worden gegeven en met plezier te worden gelezen.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#collectie">Bekijk collectie</a>
-            <a class="button secondary" href="#gift-box">Gift set kopen</a>
+            <a class="button secondary" href="#gift-box">Cadeaubox bekijken</a>
           </div>
           <ul class="mini-meta" aria-label="Belangrijke voordelen">
-            <li>Handmade look</li>
-            <li>Gift-ready packaging</li>
-            <li>Verzending naar België & Nederland</li>
+            <li>Met zorg uitgekozen</li>
+            <li>Klaar om cadeau te geven</li>
+            <li>Gratis verzending vanaf 5 boekenleggers</li>
           </ul>
         </div>
 
@@ -65,27 +72,16 @@
               <div class="bag-ribbon"></div>
             </div>
             <div class="badge">Nieuw</div>
+            <div class="hero-shipping-badge">Gratis verzending vanaf 5 boekenleggers</div>
           </div>
         </div>
       </section>
 
       <section class="promo-strip">
-        <div class="container promo-grid">
-          <div>
-            <strong>€4,50</strong>
-            <span>Per boekenlegger</span>
-          </div>
-          <div>
-            <strong>€2,50</strong>
-            <span>Verzendkosten</span>
-          </div>
-          <div>
-            <strong>België</strong>
-            <span>We leveren hier</span>
-          </div>
-          <div>
-            <strong>Nederland</strong>
-            <span>We leveren hier</span>
+        <div class="marquee-track" aria-label="Gratis verzending vanaf 5 stuks • €4,50 per stuk • Levering in België en Nederland" role="region">
+          <div class="marquee-content" aria-hidden="true">
+            <span>Gratis verzending vanaf 5 stuks</span><span>€4,50 per stuk</span><span>Levering in België & Nederland</span>
+            <span>Gratis verzending vanaf 5 stuks</span><span>€4,50 per stuk</span><span>Levering in België & Nederland</span>
           </div>
         </div>
       </section>
@@ -97,63 +93,67 @@
         </div>
 
         <div class="product-grid">
-          <article class="product-card" data-name="Blue Hydrangea" data-price="4.50">
+          <article class="product-card" data-name="Blauwe hortensia" data-price="4.50">
             <div class="product-art art-peach">
-              <img class="product-image" src="assets/products/blue-hydrangea-bookmark.jpg" alt="Blauwe hortensia met schelpen op een boekenlegger" />
+              <img class="product-image" src="assets/products/blue-hydrangea-bookmark.jpg" alt="Boekenlegger met blauwe hortensia, zee en schelpen" width="220" height="220" loading="lazy" />
             </div>
             <div class="product-info">
               <div class="meta-row">
                 <span class="tag">Bloemen</span>
                 <span class="price">€4,50</span>
               </div>
-              <h3>Blue Hydrangea</h3>
+              <h3>Blauwe hortensia</h3>
               <p>Een zomerse boekenlegger met blauwe hortensia's, zee en schelpen.</p>
-              <button class="card-button">In winkelmand</button>
+              <button class="card-button" data-add-product="hydrangea">In winkelmand</button>
+              <p class="product-shipping-note">€2,50 verzending · gratis vanaf 5 boekenleggers</p>
             </div>
           </article>
 
-          <article class="product-card" data-name="Heart Balloons" data-price="4.50">
+          <article class="product-card" data-name="Hartjesballonnen" data-price="4.50">
             <div class="product-art art-mint">
-              <img class="product-image" src="assets/products/heart-balloons-bookmark.jpg" alt="Illustratie van een meisje met hartvormige ballonnen op een boekenlegger" />
+              <img class="product-image" src="assets/products/heart-balloons-bookmark.jpg" alt="Boekenlegger met een meisje dat hartvormige ballonnen vasthoudt" width="220" height="220" loading="lazy" />
             </div>
             <div class="product-info">
               <div class="meta-row">
                 <span class="tag">Liefde</span>
                 <span class="price">€4,50</span>
               </div>
-              <h3>Heart Balloons</h3>
+              <h3>Hartjesballonnen</h3>
               <p>Een lieve illustratie vol hartjes, om cadeau te geven of zelf te houden.</p>
-              <button class="card-button">In winkelmand</button>
+              <button class="card-button" data-add-product="hearts">In winkelmand</button>
+              <p class="product-shipping-note">€2,50 verzending · gratis vanaf 5 boekenleggers</p>
             </div>
           </article>
 
-          <article class="product-card" data-name="Cat & Cupcakes" data-price="4.50">
+          <article class="product-card" data-name="Katten & cupcakes" data-price="4.50">
             <div class="product-art art-gold">
-              <img class="product-image" src="assets/products/cat-reader-bookmark.jpg" alt="Speelse kattenillustratie met cupcakes op een boekenlegger" />
+              <img class="product-image" src="assets/products/cat-reader-bookmark.jpg" alt="Boekenlegger met speelse katten en cupcakes" width="220" height="220" loading="lazy" />
             </div>
             <div class="product-info">
               <div class="meta-row">
                 <span class="tag">Katten</span>
                 <span class="price">€4,50</span>
               </div>
-              <h3>Cat & Cupcakes</h3>
+              <h3>Katten & cupcakes</h3>
               <p>Een vrolijke boekenlegger voor kattenliefhebbers en zoetekauwen.</p>
-              <button class="card-button">In winkelmand</button>
+              <button class="card-button" data-add-product="cats">In winkelmand</button>
+              <p class="product-shipping-note">€2,50 verzending · gratis vanaf 5 boekenleggers</p>
             </div>
           </article>
 
-          <article class="product-card" data-name="Winter Reindeer" data-price="4.50">
+          <article class="product-card" data-name="Winterrendier" data-price="4.50">
             <div class="product-art art-lilac">
-              <img class="product-image" src="assets/products/winter-reindeer-bookmark.jpg" alt="Schattige rendierillustratie op een winterse boekenlegger" />
+              <img class="product-image" src="assets/products/winter-reindeer-bookmark.jpg" alt="Winterse boekenlegger met een schattig rendier" width="220" height="220" loading="lazy" />
             </div>
             <div class="product-info">
               <div class="meta-row">
                 <span class="tag">Winter</span>
                 <span class="price">€4,50</span>
               </div>
-              <h3>Winter Reindeer</h3>
+              <h3>Winterrendier</h3>
               <p>Een schattige winterfavoriet, mooi als klein lees- of feestdagcadeau.</p>
-              <button class="card-button">In winkelmand</button>
+              <button class="card-button" data-add-product="reindeer">In winkelmand</button>
+              <p class="product-shipping-note">€2,50 verzending · gratis vanaf 5 boekenleggers</p>
             </div>
           </article>
         </div>
@@ -164,16 +164,13 @@
           <div class="gift-copy">
             <p class="eyebrow accent">Pakketjes & cadeauideeën</p>
             <h2>Perfect voor verjaardagen, bruiloften en “ik dacht aan jou”.</h2>
-            <p>
-              Elk product wordt in een zachte, stijlvolle cadeauzak of kleine gift box geleverd —
-              klaar om meteen te geven.
-            </p>
+            <p>De cadeaubox bevat vijf boekenleggers voor €22,50. De verzending is gratis. In deze demo worden vijf stuks van het eerste ontwerp toegevoegd.</p>
             <ul>
               <li>Persoonlijk opmaak mogelijk</li>
               <li>Ideaal als verjaardags- of trouwcadeau</li>
-              <li>Warm, gift-ready en fotogewoon</li>
+              <li>Warm, feestelijk en mooi verpakt</li>
             </ul>
-            <a class="button primary" href="#collectie">Bekijk de boekenleggers</a>
+            <button class="button primary gift-box-button" data-add-giftbox>Voeg cadeaubox toe · €22,50</button>
           </div>
           <div class="gift-visual" aria-hidden="true">
             <div class="box">
@@ -190,8 +187,8 @@
           <div class="icon">✦</div>
           <h3>Waarom deze stijl werkt</h3>
           <p>
-            Boekmerken zijn niet alleen functioneel: ze worden vaak als klein cadeau of
-            “reading ritual” ervaren. Daarom werkt een warme, vrolijke stijl het beste.
+          Boekenleggers zijn niet alleen functioneel: ze worden vaak als klein cadeau of
+            een klein, fijn leesmoment. Daarom werkt een warme, vrolijke stijl het beste.
           </p>
         </div>
         <div class="panel">
@@ -206,7 +203,7 @@
           <div class="icon">✓</div>
           <h3>Wat maakt het uniek</h3>
           <p>
-            Onze stijl combineert liefde voor boeken met zachte kleuren, giftable materiaal en
+            Onze stijl combineert liefde voor boeken met zachte kleuren, materialen om cadeau te geven en
             een warme merkpersoonlijkheid.
           </p>
         </div>
@@ -222,7 +219,7 @@
           <div class="panel">
             <div class="icon">€</div>
             <h3>Vaste verzendprijs</h3>
-            <p>De verzending kost ongeveer €2,50 per bestelling.</p>
+            <p>De verzending kost €2,50 per bestelling bij minder dan vijf boekenleggers. Vanaf vijf stuks is de verzending gratis.</p>
           </div>
           <div class="panel">
             <div class="icon">BE</div>
@@ -236,26 +233,125 @@
           </div>
         </div>
       </section>
+
+      <section class="reviews container" id="reviews" hidden aria-labelledby="reviewsTitle">
+        <div class="section-heading">
+          <p class="eyebrow accent">Voorbeeld</p>
+          <h2 id="reviewsTitle">Klantbeoordelingen</h2>
+        </div>
+        <p>Echte klantbeoordelingen worden hier geplaatst zodra ze beschikbaar zijn.</p>
+      </section>
+
+      <section class="faq container" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow accent">Veelgestelde vragen</p>
+          <h2>Goed om te weten</h2>
+        </div>
+        <details>
+          <summary>Wat kost een boekenlegger?</summary>
+          <p>Elke boekenlegger kost €4,50, inclusief btw voor zover van toepassing.</p>
+        </details>
+        <details>
+          <summary>Wanneer is de verzending gratis?</summary>
+          <p>Bij een bestelling van vijf of meer boekenleggers is de standaardverzending gratis. Bij minder dan vijf stuks is de verzending €2,50 per bestelling.</p>
+        </details>
+        <details>
+          <summary>Waar leveren jullie?</summary>
+          <p>Momenteel leveren we alleen in België en Nederland.</p>
+        </details>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-wrap">
         <div>
           <div class="brand footer-brand">
-            <span class="brand-mark">B</span>
+            <img src="assets/logo-mark.svg" alt="" width="44" height="44" />
             <span>Boekenleggers</span>
           </div>
-          <p>Leuke boekbandmarkers voor liefhebbers van lezen en geven.</p>
+          <p>Vrolijke boekenleggers voor liefhebbers van lezen en geven.</p>
         </div>
-        <div class="footer-links">
-          <a href="#collectie">Collectie</a>
-          <a href="#gift-box">Gift sets</a>
-          <a href="#about">Over ons</a>
-        </div>
-        <p class="shipping-note">Verzending: ongeveer €2,50 per bestelling · momenteel alleen naar België en Nederland.</p>
+        <nav class="legal-links" aria-label="Juridische informatie">
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="voorwaarden.html">Algemene voorwaarden</a>
+          <a href="herroeping.html">Herroeping</a>
+          <a href="verzending-retour.html">Verzending & retour</a>
+          <a href="juridische-info.html">Wettelijke info</a>
+        </nav>
+        <button class="footer-cookie-link" type="button" data-open-cookie-settings>Cookie-instellingen</button>
+        <p class="shipping-note">Betaling: nog niet beschikbaar. Verzending: €2,50 bij 1–4 boekenleggers, gratis vanaf 5 stuks. Retour: wettelijke bedenktijd van 14 dagen. Contact: [E-MAIL]. Alleen levering in België en Nederland.</p>
       </div>
     </footer>
 
+    <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+    <aside class="cart-panel" id="cartPanel" aria-labelledby="cartTitle" aria-modal="true" role="dialog" hidden>
+      <div class="cart-header">
+        <h2 id="cartTitle">Je winkelmandje</h2>
+        <button class="icon-button" type="button" data-close-cart aria-label="Winkelmandje sluiten">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="shipping-progress-wrap" id="shippingProgressWrap">
+        <p id="shippingProgressText" aria-live="polite"></p>
+        <div class="shipping-progress" role="progressbar" aria-label="Voortgang naar gratis verzending" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+          <span id="shippingProgressBar"></span>
+        </div>
+      </div>
+      <dl class="cart-totals">
+        <div><dt>Aantal boekenleggers</dt><dd id="cartQuantity">0</dd></div>
+        <div><dt>Subtotaal</dt><dd id="cartSubtotal">€0,00</dd></div>
+        <div><dt>Verzending</dt><dd id="cartShipping">—</dd></div>
+        <div class="cart-grand-total"><dt>Totaal</dt><dd id="cartTotal">€0,00</dd></div>
+      </dl>
+      <p class="vat-note">Totaal incl. btw</p>
+      <label class="terms-check">
+        <input type="checkbox" id="termsAccepted" />
+        <span>Ik ga akkoord met de <a href="voorwaarden.html">algemene voorwaarden</a>.</span>
+      </label>
+      <button class="button primary cart-checkout" type="button" id="checkoutButton" disabled>Verder naar afrekenen</button>
+      <p class="cart-demo-note">Demo: online betalen en bestellen is nog niet beschikbaar.</p>
+    </aside>
+
+    <section class="cookie-banner" id="cookieBanner" aria-labelledby="cookieTitle" hidden>
+      <div class="cookie-copy">
+        <h2 id="cookieTitle">Jouw privacykeuze</h2>
+        <p>We gebruiken strikt noodzakelijke opslag voor je winkelmandje en cookievoorkeuren. Statistieken en marketing staan standaard uit. Je keuze kun je altijd aanpassen.</p>
+        <a href="cookies.html">Lees ons cookiebeleid</a>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-choice" type="button" data-cookie-reject>Weigeren</button>
+        <button class="cookie-choice" type="button" data-cookie-preferences>Voorkeuren</button>
+        <button class="cookie-choice" type="button" data-cookie-accept>Accepteren</button>
+      </div>
+    </section>
+
+    <dialog class="cookie-dialog" id="cookiePreferences" aria-labelledby="cookiePreferencesTitle">
+      <form method="dialog" class="cookie-dialog-content">
+        <div class="cookie-dialog-heading">
+          <h2 id="cookiePreferencesTitle">Cookievoorkeuren</h2>
+          <button class="icon-button" value="cancel" aria-label="Voorkeuren sluiten">×</button>
+        </div>
+        <p>Kies welke optionele categorieën je toestaat. Strikt noodzakelijke opslag blijft altijd actief.</p>
+        <label class="cookie-category">
+          <span><strong>Strikt noodzakelijk</strong><small>Winkelmandje en cookievoorkeuren</small></span>
+          <input type="checkbox" checked disabled aria-label="Strikt noodzakelijk, altijd actief" />
+        </label>
+        <label class="cookie-category">
+          <span><strong>Statistieken</strong><small>Geanonimiseerde bezoekstatistieken, indien later ingeschakeld</small></span>
+          <input type="checkbox" id="statisticsConsent" />
+        </label>
+        <label class="cookie-category">
+          <span><strong>Marketing</strong><small>Marketingtechnologie, indien later ingeschakeld</small></span>
+          <input type="checkbox" id="marketingConsent" />
+        </label>
+        <div class="cookie-dialog-actions">
+          <button class="cookie-choice" type="button" data-cookie-reject>Weigeren</button>
+          <button class="cookie-choice" type="button" data-cookie-save>Voorkeuren opslaan</button>
+        </div>
+      </form>
+    </dialog>
+
     <script src="script.js"></script>
+    <script src="consent.js"></script>
   </body>
 </html>

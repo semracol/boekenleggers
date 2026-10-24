@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cookiebeleid van Boekenleggers.be, met uitleg over lokale browseropslag en je privacyvoorkeuren." />
+    <link rel="canonical" href="https://semracol.github.io/boekenleggers/cookies.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cookiebeleid | Boekenleggers.be" />
+    <meta property="og:description" content="Bekijk welke opslag Boekenleggers.be gebruikt en beheer je voorkeuren." />
+    <meta property="og:url" content="https://semracol.github.io/boekenleggers/cookies.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="legal.css" />
+    <title>Cookiebeleid | Boekenleggers.be</title>
+  </head>
+  <body>
+    <header class="topbar"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="44" height="44" /><span>Boekenleggers</span></a><a class="legal-home-link" href="index.html">Terug naar de winkel</a></div></header>
+    <main class="container legal-main">
+      <p class="eyebrow">Privacy & voorkeuren</p>
+      <h1>Cookiebeleid</h1>
+      <p class="legal-updated">Laatst bijgewerkt: 24 oktober 2026</p>
+      <p>Deze statische demo plaatst geen trackingcookies en laadt geen analyse- of marketingdiensten. Het winkelmandje en de privacykeuze gebruiken lokale browseropslag (localStorage); dit zijn geen HTTP-cookies. Strikt noodzakelijke opslag werkt voor de gevraagde winkelmandfunctie. Optionele categorieën zijn standaard uit.</p>
+      <div class="table-scroll"><table><thead><tr><th>Naam</th><th>Doel</th><th>Bewaartermijn</th><th>Categorie</th></tr></thead><tbody>
+        <tr><td><code>boekenleggers-cart-v1</code></td><td>Bewaren van artikelen en aantallen in je winkelmandje op dit apparaat.</td><td>Tot wissen of verwijderen door de gebruiker.</td><td>Strikt noodzakelijk (localStorage)</td></tr>
+        <tr><td><code>boekenleggers-consent-v1</code></td><td>Onthouden van je categorievoorkeuren en het tijdstip van je keuze.</td><td>6 maanden.</td><td>Strikt noodzakelijk (localStorage)</td></tr>
+        <tr><td>Geen</td><td>Statistieken worden niet geladen in deze versie.</td><td>Niet van toepassing.</td><td>Statistieken — uit</td></tr>
+        <tr><td>Geen</td><td>Marketingdiensten worden niet geladen in deze versie.</td><td>Niet van toepassing.</td><td>Marketing — uit</td></tr>
+      </tbody></table></div>
+      <h2>Je keuze aanpassen</h2>
+      <p>Gebruik de knop hieronder of de link “Cookie-instellingen” onderaan elke pagina. Je kunt optionele categorieën weigeren zonder de winkelmandfunctie te verliezen. Je browserinstellingen kunnen lokale opslag ook wissen of blokkeren.</p>
+      <button class="button primary" type="button" data-open-cookie-settings>Cookievoorkeuren openen</button>
+      <h2>Wijzigingen</h2>
+      <p>Als we later een optionele dienst toevoegen, vragen we vooraf toestemming en werken we deze tabel en het privacybeleid bij. Voor vragen: [E-MAIL].</p>
+    </main>
+    <footer class="site-footer"><div class="container legal-footer"><p><strong>Boekenleggers</strong> · Contact: [E-MAIL]</p><nav class="legal-links" aria-label="Juridische informatie"><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="voorwaarden.html">Algemene voorwaarden</a><a href="herroeping.html">Herroeping</a><a href="verzending-retour.html">Verzending & retour</a><a href="juridische-info.html">Wettelijke info</a></nav><p>Betaling: nog niet beschikbaar. Retour: wettelijke bedenktijd van 14 dagen, behoudens wettelijke uitzonderingen.</p><button class="footer-cookie-link" type="button" data-open-cookie-settings>Cookie-instellingen</button></div></footer>
+    <section class="cookie-banner" id="cookieBanner" aria-labelledby="cookieTitle" hidden><div class="cookie-copy"><h2 id="cookieTitle">Jouw privacykeuze</h2><p>Strikt noodzakelijke opslag ondersteunt het winkelmandje en je voorkeuren. Statistieken en marketing staan standaard uit.</p><a href="cookies.html">Lees ons cookiebeleid</a></div><div class="cookie-actions"><button class="cookie-choice" type="button" data-cookie-reject>Weigeren</button><button class="cookie-choice" type="button" data-cookie-preferences>Voorkeuren</button><button class="cookie-choice" type="button" data-cookie-accept>Accepteren</button></div></section>
+    <dialog class="cookie-dialog" id="cookiePreferences" aria-labelledby="cookiePreferencesTitle"><form method="dialog" class="cookie-dialog-content"><div class="cookie-dialog-heading"><h2 id="cookiePreferencesTitle">Cookievoorkeuren</h2><button class="icon-button" type="button" data-close-cookie aria-label="Voorkeuren sluiten">×</button></div><p>Strikt noodzakelijke opslag is altijd actief; optionele categorieën staan standaard uit.</p><label class="cookie-category"><span><strong>Strikt noodzakelijk</strong><small>Winkelmandje en voorkeuren</small></span><input type="checkbox" checked disabled /></label><label class="cookie-category"><span><strong>Statistieken</strong><small>Indien later ingeschakeld</small></span><input type="checkbox" id="statisticsConsent" /></label><label class="cookie-category"><span><strong>Marketing</strong><small>Indien later ingeschakeld</small></span><input type="checkbox" id="marketingConsent" /></label><div class="cookie-dialog-actions"><button class="cookie-choice" type="button" data-cookie-reject>Weigeren</button><button class="cookie-choice" type="button" data-cookie-save>Voorkeuren opslaan</button></div></form></dialog>
+    <script src="consent.js"></script>
+  </body>
+</html>

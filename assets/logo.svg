@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 112" role="img" aria-labelledby="title desc">
+  <title id="title">Boekenleggers</title>
+  <desc id="desc">Een handgetekend open boek met een boekenlegger en kwastje.</desc>
+  <defs>
+    <filter id="brush" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="8" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#brush)" stroke="#1d2b3a" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 35c17-9 33-7 47 2v49c-16-9-32-10-49-2-3-17-2-33 2-49Z" fill="#fff1d7" stroke-width="5"/>
+    <path d="M64 37c16-10 32-11 49-3 4 16 5 32 2 50-18-8-34-6-51 2Z" fill="#fffaf4" stroke-width="5"/>
+    <path d="M64 39v47" fill="none" stroke="#bd7560" stroke-width="3"/>
+    <path d="M80 26c10-6 20-8 29-6l-2 43-11 14-10-13Z" fill="#ff7a66" stroke-width="4"/>
+    <path d="m96 77-8 20m8-20 1 23m0-23 9 19" fill="none" stroke="#c86b50" stroke-width="3"/>
+    <path d="M21 49c11-5 21-4 31 1M21 60c11-5 21-4 31 1M75 50c9-5 17-6 26-4M75 62c9-5 17-6 26-4" fill="none" stroke="#d69b6c" stroke-width="2.2"/>
+  </g>
+  <text x="143" y="70" fill="#1d2b3a" font-family="Georgia,serif" font-size="42" font-weight="700" letter-spacing=".2">Boekenleggers</text>
+</svg>

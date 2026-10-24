@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 112" role="img" aria-labelledby="title">
+  <title id="title">Boekenleggers — open boek met boekenlegger</title>
+  <defs>
+    <filter id="brush" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="8" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#brush)" stroke="#1d2b3a" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 28c18-10 34-8 53 2v59c-18-10-35-11-52-2-4-20-4-39-1-59Z" fill="#fff1d7" stroke-width="5"/>
+    <path d="M64 30c18-11 34-12 54-4 4 20 4 40 1 60-19-8-36-7-55 3Z" fill="#fffaf4" stroke-width="5"/>
+    <path d="M64 32v57" fill="none" stroke="#bd7560" stroke-width="3"/>
+    <path d="M78 17c12-7 23-9 34-6l-2 50-12 15-11-14Z" fill="#ff7a66" stroke-width="4"/>
+    <path d="m98 76-10 24m10-24 1 27m0-27 11 23" fill="none" stroke="#c86b50" stroke-width="3"/>
+    <path d="M18 44c12-5 23-4 36 1M18 57c12-5 23-4 36 1M73 46c10-5 19-6 30-4M73 60c10-5 19-6 30-4" fill="none" stroke="#d69b6c" stroke-width="2.5"/>
+  </g>
+</svg>
