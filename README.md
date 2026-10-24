@@ -10,6 +10,7 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 - `etsy-fotograf-analizi.md` — mevcut Etsy görselleri üzerinden uygun ürün ve stil analizi
 - `etsy-kaligrafi-analizi.md` — Etsy benzeri fiyat aralığı ve marka konumlandırması
 - `web-tasarim-onerileri.md` — tasarım yönü ve görsel yaklaşım notları
+- `site-guncelleme.md` — yayınlanan site, ürün fotoğrafları, fiyatlar ve mevcut sınırlar
 - `taslaklar/mockup-1.html` — seçilen tasarım yönü, daha canlı ve pastel bir versiyon
 - `index.html` — çalışır storefront prototipi
 - `styles.css` — ana tasarım ve responsive stiller
