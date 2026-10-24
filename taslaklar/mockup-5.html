@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup 5 - Playful Editorial</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(180deg,#fff7ec,#ffeee8);
+      font-family: Arial, sans-serif;
+      color: #2a2331;
+    }
+    .screen {
+      width: 1200px;
+      height: 760px;
+      margin: 32px auto;
+      background: linear-gradient(180deg,#fffaf6,#fff0e5);
+      border: 1px solid #f4d4bc;
+      box-shadow: 0 22px 44px rgba(255, 159, 102, 0.16);
+      overflow: hidden;
+      border-radius: 24px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 22px 34px;
+      border-bottom: 1px solid #efd7bf;
+      background: rgba(255,255,255,.24);
+    }
+    .brand { font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #ff7a60; }
+    .nav { display: flex; gap: 22px; font-size: 14px; font-weight: 700; }
+    .wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      padding: 32px 34px 22px;
+      gap: 24px;
+      height: calc(100% - 80px);
+    }
+    .story {
+      background: linear-gradient(135deg,#ffd9b4,#fff1a8);
+      border-radius: 24px;
+      padding: 34px 30px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #f2c893;
+    }
+    .story h1 {
+      margin: 0 0 16px;
+      font-size: 54px;
+      line-height: .96;
+      letter-spacing: -1px;
+      color: #2f2d3b;
+    }
+    .story p {
+      margin: 0 0 18px;
+      max-width: 500px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #4d4b5f;
+    }
+    .mini-box {
+      display: inline-block;
+      margin-top: 10px;
+      background: rgba(255,255,255,.45);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .visual {
+      position: relative;
+      background: linear-gradient(180deg,#fffaf5,#ffe8d7);
+      border: 1px solid #efc9ad;
+      border-radius: 26px;
+      overflow: hidden;
+    }
+    .bookmark {
+      position: absolute;
+      width: 110px;
+      height: 300px;
+      left: 115px;
+      top: 110px;
+      transform: rotate(-7deg);
+      background: linear-gradient(180deg,#fffaf6,#ffe4c5);
+      border: 2px solid #e5b583;
+      border-radius: 18px 18px 12px 12px;
+      box-shadow: 0 18px 22px rgba(0,0,0,.12);
+    }
+    .bookmark::before {
+      content: "";
+      position: absolute;
+      inset: 18px 16px 24px 16px;
+      background: linear-gradient(180deg,#ffdfe5,#fff9ef);
+      border-radius: 12px;
+    }
+    .pouch {
+      position: absolute;
+      width: 210px;
+      height: 250px;
+      right: 58px;
+      bottom: 60px;
+      border-radius: 16px;
+      background: linear-gradient(180deg,#ffd4b1,#ffaf8a);
+      border: 1px solid #ef9f73;
+      transform: rotate(8deg);
+      box-shadow: 0 18px 22px rgba(0,0,0,.12);
+    }
+    .tag {
+      position: absolute;
+      left: 26px; bottom: 28px;
+      background: rgba(255,255,255,.52);
+      border: 1px solid rgba(80,60,45,.15);
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: 13px;
+      color: #4a3c38;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="topbar">
+      <div class="brand">SUNBOOK</div>
+      <div class="nav">
+        <span>Hikâye</span>
+        <span>Mağaza</span>
+        <span>Journal</span>
+        <span>Hediye seti</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="story">
+        <div class="mini-box">Küçük bir ritüel</div>
+        <h1>Ayracın sadece bir işaret değil, bir mutluluk anı olduğunu biliyor musun?</h1>
+        <p>İndirdiğin sayfanın kenarında duran küçük bir kahkaha, bir sevgi notu ve yumuşak bir torba. İşte bu yüzden her ayracımız özel.</p>
+        <p>Pastel tasarımlar, zarif kurdeleler ve sıcak paketleme ile bütünleşen küçük güzellikler üretiyoruz.</p>
+      </div>
+      <div class="visual">
+        <div class="bookmark"></div>
+        <div class="pouch"></div>
+        <div class="tag">Mutlu okuyucular için özel tasarım.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

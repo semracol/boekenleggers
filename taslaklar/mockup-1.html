@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup 1 - Cheerful</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #fffaf2, #ffe8cc);
+      color: #26313d;
+    }
+    .screen {
+      width: 1200px;
+      height: 760px;
+      margin: 32px auto;
+      background: linear-gradient(180deg, #fffefb, #fff4de);
+      border: 1px solid #f4d1ad;
+      box-shadow: 0 24px 58px rgba(255, 164, 100, 0.18);
+      overflow: hidden;
+      border-radius: 24px;
+    }
+    .topbar {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 34px;
+      background: rgba(255,255,255,0.45);
+      border-bottom: 1px solid #f8d9bb;
+    }
+    .brand { font-size: 26px; font-weight: 900; letter-spacing: 2px; color: #ff6f61; }
+    .nav { display: flex; gap: 26px; font-size: 14px; font-weight: 700; }
+    .nav span { opacity: .8; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      padding: 32px 34px 16px;
+      gap: 26px;
+      align-items: center;
+    }
+    .hero-copy h1 {
+      font-size: 52px;
+      line-height: 0.98;
+      margin: 0 0 18px;
+      letter-spacing: -1.5px;
+      color: #1d2d3a;
+    }
+    .hero-copy p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #4d5f73;
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      border: none;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn.primary { background: linear-gradient(135deg, #ff7a66, #ffb26b); color: white; box-shadow: 0 10px 22px rgba(255, 122, 102, 0.3); }
+    .btn.secondary { background: #fff1d8; color: #2d3e4f; }
+    .mock-product {
+      position: relative;
+      background: linear-gradient(135deg, #ffd9b3, #fff7eb);
+      height: 430px;
+      border-radius: 30px;
+      border: 1px solid #f3d3af;
+      overflow: hidden;
+    }
+    .bookmark {
+      position: absolute;
+      left: 120px;
+      top: 90px;
+      width: 115px;
+      height: 260px;
+      background: linear-gradient(180deg,#fffaf7,#f9dfc7);
+      border-radius: 18px 18px 12px 12px;
+      border: 2px solid #ddb585;
+      box-shadow: 0 20px 28px rgba(0,0,0,.12);
+      transform: rotate(-7deg);
+    }
+    .bookmark::before {
+      content: "";
+      position: absolute;
+      inset: 18px 14px 18px 14px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #ffefd7, #fff5ef);
+    }
+    .pouch {
+      position: absolute;
+      width: 210px;
+      height: 285px;
+      background: linear-gradient(180deg, #fbe8d9, #f4c89d);
+      border-radius: 18px;
+      right: 78px;
+      top: 92px;
+      border: 1px solid #efbf89;
+      box-shadow: 0 24px 28px rgba(118, 78, 51, 0.12);
+    }
+    .pouch::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 14px;
+      border: 1px dashed rgba(98,71,52,.4);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding: 12px 34px 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #f2d7b8;
+      border-radius: 20px;
+      min-height: 200px;
+      padding: 16px;
+      box-shadow: 0 10px 18px rgba(255,166,120,0.08);
+    }
+    .mini {
+      height: 122px;
+      border-radius: 16px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffd7d5, #ffe8a6);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 19px; }
+    .card p { margin: 0; color: #5a6a79; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="topbar">
+      <div class="brand">BLOOMBOOK</div>
+      <div class="nav">
+        <span>Çeşitler</span>
+        <span>Hediye Seti</span>
+        <span>Kişisel</span>
+        <span>Blog</span>
+        <span>Sepet</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>Kitapla birlikte gülümseyen bir ayracın zamanı.</h1>
+        <p>Renkli, sıcak ve özel tasarımlar. Her ayracın yanında yumuşak bir hediye torbası var.</p>
+        <div class="actions">
+          <button class="btn primary">Ürünleri gör</button>
+          <button class="btn secondary">Hediye setleri</button>
+        </div>
+      </div>
+      <div class="mock-product">
+        <div class="bookmark"></div>
+        <div class="pouch"></div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="mini" style="background:linear-gradient(135deg,#ffd1dc,#ffefb3);"></div>
+        <h3>Floral</h3>
+        <p>Yumuşak ve canlı</p>
+      </div>
+      <div class="card">
+        <div class="mini" style="background:linear-gradient(135deg,#d6f6ff,#b8e7c9);"></div>
+        <h3>Garden</h3>
+        <p>Temiz ve neşeli</p>
+      </div>
+      <div class="card">
+        <div class="mini" style="background:linear-gradient(135deg,#ffe4b5,#ffc7c7);"></div>
+        <h3>Characters</h3>
+        <p>Mutlu ve eğlenceli</p>
+      </div>
+      <div class="card">
+        <div class="mini" style="background:linear-gradient(135deg,#e7d7ff,#c8eaff);"></div>
+        <h3>Gift Box</h3>
+        <p>Hediye gibi</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

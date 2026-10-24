@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup 4 - Handmade Joy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg,#fffaf3,#ffe7d6);
+      color: #2e2530;
+    }
+    .screen {
+      width: 1200px;
+      height: 760px;
+      margin: 32px auto;
+      background: linear-gradient(180deg,#fffdfb,#fff4ea);
+      border: 1px solid #f3d1ba;
+      box-shadow: 0 20px 42px rgba(255, 165, 122, 0.15);
+      overflow: hidden;
+      border-radius: 24px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 36px;
+      border-bottom: 1px solid #f0d6be;
+    }
+    .brand { font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #ff7d6b; }
+    .nav { display: flex; gap: 22px; font-size: 14px; font-weight: 700; }
+    .content {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      padding: 26px 36px 18px;
+      align-items: center;
+    }
+    .left {
+      background: linear-gradient(135deg,#ffd9c2,#fff4c2);
+      border-radius: 26px;
+      height: 560px;
+      padding: 38px 30px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #f0d098;
+    }
+    .left h1 {
+      font-size: 46px;
+      line-height: 1.02;
+      letter-spacing: -1px;
+      margin: 0 0 16px;
+      color: #2d2c3c;
+    }
+    .left p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #4e5363;
+      max-width: 480px;
+    }
+    .left .bullets {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      color: #445060;
+      font-weight: 700;
+    }
+    .right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      height: 560px;
+    }
+    .panel {
+      background: linear-gradient(180deg,#fffaf2,#ffe2d7);
+      border: 1px solid #efc9ac;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .panel.large {
+      grid-column: span 2;
+    }
+    .bookmark {
+      position: absolute;
+      width: 102px;
+      height: 220px;
+      background: linear-gradient(180deg,#fffaf1,#ffe9c7);
+      border: 2px solid #e9b27f;
+      border-radius: 18px 18px 12px 12px;
+      top: 70px; left: 50%; transform: translateX(-50%) rotate(6deg);
+      box-shadow: 0 16px 20px rgba(0,0,0,.12);
+    }
+    .bookmark::before {
+      content: "";
+      position: absolute;
+      inset: 18px 16px 18px 16px;
+      background: linear-gradient(180deg,#ffe5d6,#fff8f0);
+      border-radius: 12px;
+    }
+    .bag {
+      position: absolute;
+      width: 160px;
+      height: 200px;
+      background: linear-gradient(180deg,#ffd4af,#ffb785);
+      border: 1px solid #f5a06f;
+      border-radius: 12px;
+      right: 18px; bottom: 18px;
+      box-shadow: 0 14px 22px rgba(0,0,0,.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="topbar">
+      <div class="brand">HAPPYMADE</div>
+      <div class="nav">
+        <span>Çiçek</span>
+        <span>Mevsimsel</span>
+        <span>Hediye fikirleri</span>
+        <span>Hakkımızda</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left">
+        <h1>Okuyanlara özel, sevilenlere hediye.</h1>
+        <p>Renkli ayracılar, yumuşak torbalar ve sevimli detaylar; küçük bir mutluluk yaratır.</p>
+        <div class="bullets">
+          <div>✓ El yapımı detaylar</div>
+          <div>✓ Yumuşak hediye paketleri</div>
+          <div>✓ Küçük üretim koleksiyonları</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="panel">
+          <div class="bookmark"></div>
+        </div>
+        <div class="panel">
+          <div class="bag"></div>
+        </div>
+        <div class="panel large">
+          <div style="position:absolute;left:26px;top:28px;right:26px;">
+            <h3 style="margin:0 0 10px;font-size:26px;color:#2d2c3a;">Seçili koleksiyonlar</h3>
+            <p style="margin:0;color:#4d5062;line-height:1.6;">Çiçekli, karakterli ve mevsimlik setler; doğum günü, öğretmenler ve kitap kulüpleri için.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup 3 - Cheerful Gift Ready</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg,#fff6f1,#ffeae2);
+      font-family: Arial, sans-serif;
+      color: #2d2a3a;
+    }
+    .screen {
+      width: 1200px;
+      height: 760px;
+      margin: 32px auto;
+      background: linear-gradient(180deg,#fffaf8,#fff0eb);
+      border: 1px solid #f4d1c0;
+      overflow: hidden;
+      box-shadow: 0 22px 42px rgba(255, 145, 120, 0.16);
+      border-radius: 24px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      border-bottom: 1px solid #f4d5c2;
+    }
+    .brand { font-size: 24px; font-weight: 900; letter-spacing: 2px; color: #ff6c5a; }
+    .nav { display: flex; gap: 26px; font-size: 14px; font-weight: 700; }
+    .hero {
+      padding: 34px 40px 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .text h1 {
+      font-size: 56px;
+      letter-spacing: -1.5px;
+      margin: 0 0 18px;
+      line-height: .96;
+      color: #222b36;
+    }
+    .text p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #586779;
+      margin-bottom: 24px;
+    }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      border: none;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn.primary { background: linear-gradient(135deg,#ff8c70,#ffc872); color: white; box-shadow: 0 12px 20px rgba(255, 140, 112, 0.25); }
+    .btn.second { background: #fff0d6; color: #2f3f53; }
+    .visual {
+      height: 460px;
+      position: relative;
+      border-radius: 28px;
+      background: linear-gradient(135deg,#ffe5cc,#fff6d9);
+      border: 1px solid #f0d0a7;
+      overflow: hidden;
+    }
+    .bookmark {
+      position: absolute;
+      left: 120px; top: 90px;
+      width: 120px; height: 250px;
+      background: linear-gradient(180deg,#fffaf4,#ffe9c8);
+      border: 2px solid #e7b87c;
+      border-radius: 18px 18px 12px 12px;
+      box-shadow: 0 18px 24px rgba(0,0,0,.12);
+      transform: rotate(-8deg);
+    }
+    .bookmark::before {
+      content: "";
+      position: absolute;
+      inset: 18px 14px 30px 14px;
+      border-radius: 10px;
+      background: linear-gradient(180deg,#ffd9d8,#fffaf3);
+    }
+    .bag {
+      position: absolute;
+      width: 210px;
+      height: 260px;
+      right: 72px; top: 110px;
+      background: linear-gradient(180deg,#ffd9b3,#ffb88b);
+      border: 1px solid #efaa7c;
+      border-radius: 16px;
+      transform: rotate(8deg);
+      box-shadow: 0 18px 26px rgba(0,0,0,.12);
+    }
+    .bag::before {
+      content: "";
+      position: absolute;
+      inset: 20px 18px 18px 18px;
+      border: 1px dashed rgba(74,56,44,.35);
+      border-radius: 10px;
+    }
+    .gifts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10px 40px 30px;
+      gap: 18px;
+    }
+    .prod {
+      background: rgba(255,255,255,.72);
+      border: 1px solid #f0d0bd;
+      border-radius: 18px;
+      padding: 18px;
+      min-height: 160px;
+      box-shadow: 0 8px 16px rgba(255, 160, 120, 0.08);
+    }
+    .mini {
+      height: 90px;
+      border-radius: 12px;
+      background: linear-gradient(135deg,#ffd7d7,#ffe6a8);
+      margin-bottom: 12px;
+    }
+    .prod h3 { margin: 0 0 5px; font-size: 18px; }
+    .prod p { margin: 0; color: #5f6a79; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="topbar">
+      <div class="brand">HAPPYBOOK</div>
+      <div class="nav">
+        <span>Mağaza</span>
+        <span>Kişisel</span>
+        <span>Hediye seti</span>
+        <span>Yorumlar</span>
+        <span>Sepet</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="text">
+        <h1>Hediyeniz bir mutluluk anı olsun.</h1>
+        <p>İsim ekleyin, kurdele seçin ve kutulu, torbalı bir okuma hediyesi hazırlayın.</p>
+        <div class="actions">
+          <button class="btn primary">Özelleştir</button>
+          <button class="btn second">Ürünleri gör</button>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="bookmark"></div>
+        <div class="bag"></div>
+      </div>
+    </div>
+
+    <div class="gifts">
+      <div class="prod">
+        <div class="mini" style="background:linear-gradient(135deg,#f6d9ff,#ffd9b8);"></div>
+        <h3>Kişisel</h3>
+        <p>İsim veya harf</p>
+      </div>
+      <div class="prod">
+        <div class="mini" style="background:linear-gradient(135deg,#ffd4d1,#ffc894);"></div>
+        <h3>Torba</h3>
+        <p>Yumuşak hediye</p>
+      </div>
+      <div class="prod">
+        <div class="mini" style="background:linear-gradient(135deg,#d8f0ff,#ffe3a3);"></div>
+        <h3>Kitap kulübü</h3>
+        <p>3’lü setler</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
