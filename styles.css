@@ -677,6 +677,7 @@ blockquote footer {
   border-top: 1px solid rgba(230, 188, 152, 0.6);
   background: rgba(255, 250, 243, 0.98);
   margin-top: 48px;
+  font-size: 50%;
 }
 
 .footer-wrap {
@@ -689,6 +690,7 @@ blockquote footer {
 
 .footer-brand {
   margin-bottom: 8px;
+  font-size: clamp(0.75rem, 1vw, 1.05rem);
 }
 
 .site-footer p {
@@ -721,7 +723,7 @@ blockquote footer {
 
 .shipping-note {
   flex-basis: 100%;
-  font-size: 0.9rem;
+  font-size: 0.45rem;
 }
 
 .cart-backdrop {
