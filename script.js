@@ -303,19 +303,6 @@ if (!reducedMotion.matches) {
     });
   });
 
-  const scene = document.querySelector(".product-scene");
-  scene.addEventListener("pointermove", (event) => {
-    if (event.pointerType !== "mouse") return;
-    const bounds = scene.getBoundingClientRect();
-    const offsetX = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const offsetY = (event.clientY - bounds.top) / bounds.height - 0.5;
-    scene.style.setProperty("--parallax-x", `${offsetX * 10}px`);
-    scene.style.setProperty("--parallax-y", `${offsetY * 8}px`);
-  });
-  scene.addEventListener("pointerleave", () => {
-    scene.style.removeProperty("--parallax-x");
-    scene.style.removeProperty("--parallax-y");
-  });
 }
 
 window.addEventListener(
@@ -326,3 +313,114 @@ window.addEventListener(
 
 setupRevealAnimations();
 animateHeroTitle();
+
+const railButtons = [...document.querySelectorAll("[data-rail-bookmark]")];
+const railDots = [...document.querySelectorAll("[data-rail-dot]")];
+const railName = document.querySelector("[data-rail-name]");
+const railPrice = document.querySelector("[data-rail-price]");
+const railDescription = document.querySelector("[data-rail-description]");
+const railAddButton = document.querySelector("[data-rail-add]");
+
+if (railButtons.length && railName && railPrice && railDescription && railAddButton) {
+  const railProducts = new Map(
+    productCards.map((card) => {
+      const button = card.querySelector("[data-add-product]");
+      return [
+        button.dataset.addProduct,
+        {
+          name: card.dataset.name,
+          price: card.querySelector(".price").textContent,
+          description: card.querySelector(".product-info > p:not(.product-shipping-note)").textContent,
+        },
+      ];
+    }),
+  );
+  let activeRailIndex = 0;
+  let addResetTimer = 0;
+
+  function selectRailItem(index, focus = false) {
+    activeRailIndex = (index + railButtons.length) % railButtons.length;
+    railButtons.forEach((button, buttonIndex) => {
+      const selected = buttonIndex === activeRailIndex;
+      const product = railProducts.get(button.dataset.productId);
+      button.classList.toggle("is-active", selected);
+      button.tabIndex = selected ? 0 : -1;
+      if (selected) {
+        button.setAttribute("aria-current", "true");
+        railName.textContent = product.name;
+        railPrice.textContent = product.price;
+        railDescription.textContent = product.description;
+        railAddButton.dataset.addFeatured = button.dataset.productId;
+        button.setAttribute(
+          "aria-label",
+          button.getAttribute("aria-pressed") === "true"
+            ? `Toon de voorkant van ${product.name}`
+            : `Draai ${product.name} om`,
+        );
+      } else {
+        button.removeAttribute("aria-current");
+        button.setAttribute("aria-pressed", "false");
+        button.setAttribute("aria-label", `Draai ${product.name} om`);
+      }
+    });
+    railDots.forEach((dot, dotIndex) => {
+      if (dotIndex === activeRailIndex) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+    railAddButton.textContent = "In winkelmand";
+    railAddButton.disabled = false;
+    window.clearTimeout(addResetTimer);
+    if (focus) railButtons[activeRailIndex].focus();
+  }
+
+  railButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      if (index !== activeRailIndex) {
+        selectRailItem(index);
+        return;
+      }
+      const flipped = button.getAttribute("aria-pressed") !== "true";
+      button.setAttribute("aria-pressed", String(flipped));
+      button.setAttribute(
+        "aria-label",
+        flipped
+          ? `Toon de voorkant van ${railProducts.get(button.dataset.productId).name}`
+          : `Draai ${railProducts.get(button.dataset.productId).name} om`,
+      );
+    });
+  });
+
+  document.querySelector(".bookmark-hangers").addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const next =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? railButtons.length - 1
+          : activeRailIndex + (event.key === "ArrowRight" ? 1 : -1);
+    selectRailItem(next, true);
+  });
+
+  document.querySelector("[data-rail-prev]").addEventListener("click", () => {
+    selectRailItem(activeRailIndex - 1);
+  });
+  document.querySelector("[data-rail-next]").addEventListener("click", () => {
+    selectRailItem(activeRailIndex + 1);
+  });
+  railDots.forEach((dot) => {
+    dot.addEventListener("click", () => selectRailItem(Number(dot.dataset.railDot)));
+  });
+
+  railAddButton.addEventListener("click", () => {
+    const productId = railAddButton.dataset.addFeatured;
+    addProduct(productId);
+    railAddButton.textContent = "Toegevoegd ✓";
+    railAddButton.disabled = true;
+    window.clearTimeout(addResetTimer);
+    addResetTimer = window.setTimeout(() => {
+      railAddButton.textContent = "In winkelmand";
+      railAddButton.disabled = false;
+    }, 1400);
+  });
+}

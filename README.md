@@ -1,6 +1,6 @@
 # Boekenleggers.be — boekenleggerwinkel
 
-Çalışma alanı: `/Users/semra/Desktop/kitap-ayraci-git`
+Werkmap: de hoofdmap van deze repository.
 
 Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub Pages üzerinde yayınlanan statik web prototipini içerir.
 
@@ -14,6 +14,7 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 - `taslaklar/mockup-1.html` — seçilen tasarım yönü, daha canlı ve pastel bir versiyon
 - `index.html` — responsive mağaza, ürün kartları, sepet ve çerez arayüzü
 - `styles.css` — ana tasarım, animasyonlar ve mobile-first stiller
+- `redesign.css` — nieuwe papier-en-inktstijl en interactieve boekenleggerrail
 - `script.js` — sepet, ücretsiz kargo eşiği ve interface animasyonları
 - `consent.js` — çerez tercihleri ve açık onaya bağlı opsiyonel script yükleme kapısı
 - `privacy.html`, `cookies.html`, `voorwaarden.html`, `herroeping.html`, `verzending-retour.html`, `juridische-info.html` — Nederlandstalige juridische pagina's
@@ -26,10 +27,10 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 
 ## Seçilen tasarım yönü
 
-Bu sürüm, soğuk lüks değil, sıcak, neşeli ve hediye-gibi hissettiren bir mağaza yaklaşımını benimser:
+Deze versie combineert een warme papierkleur met diepe inktkleuren, productillustraties en een interactieve rail die de boekenleggers centraal stelt:
 
-- pastel arka planlar
-- neşeli renkler
+- warme papier- en inktkleuren met accenten uit de productillustraties
+- een interactieve, responsieve rail om de vier boekenleggerontwerpen te bekijken
 - cadeaubox voor vijf boekenleggers: €22,50
 - boekenleggerprijs: €4,50 per stuk
 - verzending: €2,50 per bestelling bij 1–4 stuks; gratis vanaf 5 stuks
@@ -41,7 +42,7 @@ Bu sürüm, soğuk lüks değil, sıcak, neşeli ve hediye-gibi hissettiren bir 
 - Winkelmandje en cookievoorkeuren worden lokaal in de browser opgeslagen. Cookiekeuzes worden na zes maanden opnieuw gevraagd.
 - De checkout is een demo: er wordt geen bestelling of betaling verwerkt.
 - Juridische teksten zijn voorbereidingen en vormen geen vervanging van juridisch advies.
-- De huidige versie is lokaal voorbereid en nog niet naar GitHub gepusht; publiceer pas na akkoord en na invulling van de bedrijfsgegevens.
+- GitHub Pages wordt vanuit de hoofdmap van de `main`-branch gepubliceerd. De winkel blijft een demo en is niet geschikt voor echte verkoop zolang bedrijfs- en betaalgegevens ontbreken.
 
 ### Nodig vóór publicatie/verkoop
 
@@ -60,7 +61,6 @@ Bu sürüm, soğuk lüks değil, sıcak, neşeli ve hediye-gibi hissettiren bir 
 Aşağıdaki komutla yerelde çalıştırılabilir:
 
 ```bash
-cd /Users/semra/Desktop/kitap-ayraci-git
 python3 -m http.server 8000
 ```
 
@@ -68,16 +68,10 @@ Sonra tarayıcıda şu adrese gidin:
 
 `http://localhost:8000`
 
-## GitHub
+## GitHub Pages
 
 Repo: [semracol/boekenleggers](https://github.com/semracol/boekenleggers)
 
 GitHub Pages: [https://semracol.github.io/boekenleggers/](https://semracol.github.io/boekenleggers/)
 
-Lokaal testen:
-
-```bash
-python3 -m http.server 8000
-```
-
-Open daarna `http://localhost:8000`. De huidige lokale wijzigingen zijn niet gepusht.
+GitHub Pages gebruikt de bestaande legacy-bron: de hoofdmap van de `main`-branch. Start voor lokaal testen de server vanuit de repository-root en open daarna `http://localhost:8000`.

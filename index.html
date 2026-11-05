@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
+  <!--
+  THESIS: A reading gift is shown as four hanging bookmark badges, not a generic product hero.
+  OWN-WORLD: Ink-blue rail hardware, woven cords, printed bookmark art, and a vivid paper palette.
+  STORY: Visitors flip through the real designs, see the price and shipping terms, and add a bookmark.
+  FIRST VIEWPORT: Sticky shop navigation; headline and collection action on the left; a full lanyard rail with selected-product details on the right.
+  FORM: The supplied team-badge rail is adapted to this static shop, using its four real products and keeping the existing demo-cart behavior.
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +24,7 @@
     <link rel="preload" href="assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/baloo-2-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="redesign.css" />
   </head>
   <body>
     <header class="topbar">
@@ -46,7 +54,6 @@
     <main>
       <section class="hero container">
         <div class="hero-copy">
-          <p class="eyebrow">Kleurrijk • gezellig • cadeau-ready</p>
           <h1 id="heroTitle">Maak elke pagina een klein feestje.</h1>
           <p class="lead">
             Van zachte bloemen tot vrolijke illustraties: onze boekenleggers zijn
@@ -63,33 +70,116 @@
           </ul>
         </div>
 
-        <div class="hero-visual" aria-label="Product showcase">
-          <div class="product-scene">
-            <div class="bookmark bookmark-one"></div>
-            <div class="bookmark bookmark-two"></div>
-            <div class="gift-bag">
-              <div class="bag-top"></div>
-              <div class="bag-ribbon"></div>
+        <div class="hero-visual">
+          <section class="bookmark-showcase" aria-labelledby="showcaseTitle">
+            <div class="showcase-heading">
+              <h2 id="showcaseTitle">Kies je leesmaatje</h2>
+              <p>Vier illustraties, elk een klein cadeau.</p>
             </div>
-            <div class="badge">Nieuw</div>
-            <div class="hero-shipping-badge">Gratis verzending vanaf 5 boekenleggers</div>
-          </div>
+            <div class="rail-stage">
+              <div class="showcase-rail" aria-hidden="true">
+                <span class="showcase-rail-shadow"></span>
+                <span class="showcase-rail-bar"></span>
+                <span class="showcase-rail-mount showcase-rail-mount-left"></span>
+                <span class="showcase-rail-mount showcase-rail-mount-right"></span>
+              </div>
+              <div class="bookmark-hangers" role="group" aria-label="Boekenleggers aan een hangrail">
+                <button class="rail-bookmark is-active" type="button" data-rail-bookmark data-product-id="hydrangea" aria-label="Draai Blauwe hortensia om" aria-current="true" aria-pressed="false">
+                  <span class="lanyard" aria-hidden="true"><span class="lanyard-loop"></span></span>
+                  <span class="rail-badge" aria-hidden="true">
+                    <span class="rail-badge-face rail-badge-front">
+                      <img src="assets/products/blue-hydrangea-bookmark.jpg" alt="" width="220" height="220" />
+                      <span class="rail-badge-name">Blauwe hortensia</span>
+                    </span>
+                    <span class="rail-badge-face rail-badge-back">
+                      <span class="tag">Bloemen</span>
+                      <strong>Blauwe hortensia</strong>
+                      <span>Een zomerse boekenlegger met blauwe hortensia's, zee en schelpen.</span>
+                      <span class="rail-badge-price">€4,50</span>
+                    </span>
+                  </span>
+                </button>
+                <button class="rail-bookmark" type="button" data-rail-bookmark data-product-id="hearts" aria-label="Draai Hartjesballonnen om" aria-pressed="false">
+                  <span class="lanyard" aria-hidden="true"><span class="lanyard-loop"></span></span>
+                  <span class="rail-badge" aria-hidden="true">
+                    <span class="rail-badge-face rail-badge-front">
+                      <img src="assets/products/heart-balloons-bookmark.jpg" alt="" width="220" height="220" />
+                      <span class="rail-badge-name">Hartjesballonnen</span>
+                    </span>
+                    <span class="rail-badge-face rail-badge-back">
+                      <span class="tag">Liefde</span>
+                      <strong>Hartjesballonnen</strong>
+                      <span>Een lieve illustratie vol hartjes, om cadeau te geven of zelf te houden.</span>
+                      <span class="rail-badge-price">€4,50</span>
+                    </span>
+                  </span>
+                </button>
+                <button class="rail-bookmark" type="button" data-rail-bookmark data-product-id="cats" aria-label="Draai Katten & cupcakes om" aria-pressed="false">
+                  <span class="lanyard" aria-hidden="true"><span class="lanyard-loop"></span></span>
+                  <span class="rail-badge" aria-hidden="true">
+                    <span class="rail-badge-face rail-badge-front">
+                      <img src="assets/products/cat-reader-bookmark.jpg" alt="" width="220" height="220" />
+                      <span class="rail-badge-name">Katten & cupcakes</span>
+                    </span>
+                    <span class="rail-badge-face rail-badge-back">
+                      <span class="tag">Katten</span>
+                      <strong>Katten & cupcakes</strong>
+                      <span>Een vrolijke boekenlegger voor kattenliefhebbers en zoetekauwen.</span>
+                      <span class="rail-badge-price">€4,50</span>
+                    </span>
+                  </span>
+                </button>
+                <button class="rail-bookmark" type="button" data-rail-bookmark data-product-id="reindeer" aria-label="Draai Winterrendier om" aria-pressed="false">
+                  <span class="lanyard" aria-hidden="true"><span class="lanyard-loop"></span></span>
+                  <span class="rail-badge" aria-hidden="true">
+                    <span class="rail-badge-face rail-badge-front">
+                      <img src="assets/products/winter-reindeer-bookmark.jpg" alt="" width="220" height="220" />
+                      <span class="rail-badge-name">Winterrendier</span>
+                    </span>
+                    <span class="rail-badge-face rail-badge-back">
+                      <span class="tag">Winter</span>
+                      <strong>Winterrendier</strong>
+                      <span>Een schattige winterfavoriet, mooi als klein lees- of feestdagcadeau.</span>
+                      <span class="rail-badge-price">€4,50</span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="rail-controls">
+              <button class="rail-arrow" type="button" data-rail-prev aria-label="Vorige boekenlegger">←</button>
+              <div class="rail-dots" role="group" aria-label="Kies een boekenlegger">
+                <button type="button" data-rail-dot="0" aria-label="Toon Blauwe hortensia" aria-current="true"></button>
+                <button type="button" data-rail-dot="1" aria-label="Toon Hartjesballonnen"></button>
+                <button type="button" data-rail-dot="2" aria-label="Toon Katten & cupcakes"></button>
+                <button type="button" data-rail-dot="3" aria-label="Toon Winterrendier"></button>
+              </div>
+              <button class="rail-arrow" type="button" data-rail-next aria-label="Volgende boekenlegger">→</button>
+            </div>
+            <div class="rail-caption" id="railCaption" aria-live="polite" aria-atomic="true">
+              <div class="rail-caption-heading">
+                <strong data-rail-name>Blauwe hortensia</strong>
+                <span data-rail-price>€4,50</span>
+              </div>
+              <p data-rail-description>Een zomerse boekenlegger met blauwe hortensia's, zee en schelpen.</p>
+              <button class="rail-add-button" type="button" data-rail-add data-add-featured="hydrangea">In winkelmand</button>
+            </div>
+          </section>
         </div>
       </section>
 
       <section class="promo-strip">
-        <div class="marquee-track" aria-label="Gratis verzending vanaf 5 stuks • €4,50 per stuk • Levering in België en Nederland" role="region">
-          <div class="marquee-content" aria-hidden="true">
-            <span>Gratis verzending vanaf 5 stuks</span><span>€4,50 per stuk</span><span>Levering in België & Nederland</span>
-            <span>Gratis verzending vanaf 5 stuks</span><span>€4,50 per stuk</span><span>Levering in België & Nederland</span>
-          </div>
+        <div class="container promo-content" aria-label="Gratis verzending vanaf 5 stuks • €4,50 per stuk • Levering in België en Nederland" role="region">
+          <span>€4,50 per boekenlegger</span>
+          <span>Gratis verzending vanaf 5</span>
+          <span>Levering in België & Nederland</span>
         </div>
       </section>
 
       <section class="collection container" id="collectie">
         <div class="section-heading">
-          <p class="eyebrow accent">Favoriete keuzes</p>
           <h2>Collectie voor elk soort lezer</h2>
+          <p>Ontdek de illustraties en kies je favoriete bladwijzer.</p>
         </div>
 
         <div class="product-grid">
@@ -162,13 +252,12 @@
       <section class="gift-banner" id="gift-box">
         <div class="container gift-layout">
           <div class="gift-copy">
-            <p class="eyebrow accent">Pakketjes & cadeauideeën</p>
             <h2>Perfect voor verjaardagen, bruiloften en “ik dacht aan jou”.</h2>
             <p>De cadeaubox bevat vijf boekenleggers voor €22,50. De verzending is gratis. In deze demo worden vijf stuks van het eerste ontwerp toegevoegd.</p>
             <ul>
-              <li>Persoonlijk opmaak mogelijk</li>
+              <li>Vijf boekenleggers in één cadeau</li>
               <li>Ideaal als verjaardags- of trouwcadeau</li>
-              <li>Warm, feestelijk en mooi verpakt</li>
+              <li>Gratis verzending inbegrepen</li>
             </ul>
             <button class="button primary gift-box-button" data-add-giftbox>Voeg cadeaubox toe · €22,50</button>
           </div>
@@ -185,34 +274,25 @@
       <section class="info-grid container" id="about">
         <div class="panel">
           <div class="icon">✦</div>
-          <h3>Waarom deze stijl werkt</h3>
-          <p>
-          Boekenleggers zijn niet alleen functioneel: ze worden vaak als klein cadeau of
-            een klein, fijn leesmoment. Daarom werkt een warme, vrolijke stijl het beste.
-          </p>
+          <h3>Een klein cadeau</h3>
+          <p>Een boekenlegger past bij een boekclub, een verjaardag of een spontaan gebaar voor een lezer.</p>
         </div>
         <div class="panel">
           <div class="icon">♥</div>
-          <h3>Voor wie?</h3>
-          <p>
-            Lezers, bibliotheekliefhebbers, boekclubleden, studenten, cadeauzoekers en mensen die
-            graag een persoonlijk iets geven.
-          </p>
+          <h3>Vier illustraties</h3>
+          <p>Kies uit bloemen, hartjesballonnen, katten met cupcakes of een winterrendier.</p>
         </div>
         <div class="panel">
           <div class="icon">✓</div>
-          <h3>Wat maakt het uniek</h3>
-          <p>
-            Onze stijl combineert liefde voor boeken met zachte kleuren, materialen om cadeau te geven en
-            een warme merkpersoonlijkheid.
-          </p>
+          <h3>Verzending in de buurt</h3>
+          <p>We tonen verzending voor België en Nederland: €2,50 onder vijf stuks, gratis vanaf vijf.</p>
         </div>
       </section>
 
       <section class="reviews container" id="shipping">
         <div class="section-heading">
-          <p class="eyebrow accent">Verzending</p>
           <h2>Nu beschikbaar in België en Nederland</h2>
+          <p>De verzendprijs hangt af van het aantal boekenleggers in je bestelling.</p>
         </div>
 
         <div class="review-grid">
@@ -224,7 +304,7 @@
           <div class="panel">
             <div class="icon">BE</div>
             <h3>België</h3>
-            <p>Bestellen en bezorgen is momenteel alleen binnen België beschikbaar.</p>
+            <p>Bestellen en bezorgen is momenteel beschikbaar in België en Nederland.</p>
           </div>
           <div class="panel">
             <div class="icon">NL</div>
@@ -236,7 +316,6 @@
 
       <section class="reviews container" id="reviews" hidden aria-labelledby="reviewsTitle">
         <div class="section-heading">
-          <p class="eyebrow accent">Voorbeeld</p>
           <h2 id="reviewsTitle">Klantbeoordelingen</h2>
         </div>
         <p>Echte klantbeoordelingen worden hier geplaatst zodra ze beschikbaar zijn.</p>
@@ -244,8 +323,8 @@
 
       <section class="faq container" id="faq">
         <div class="section-heading">
-          <p class="eyebrow accent">Veelgestelde vragen</p>
           <h2>Goed om te weten</h2>
+          <p>Antwoorden over prijzen, verzenden en bestellen.</p>
         </div>
         <details>
           <summary>Wat kost een boekenlegger?</summary>

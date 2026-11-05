@@ -4,7 +4,14 @@
 **Çalışma klasörü:** `/Users/semra/Desktop/kitap-ayraci-git`  
 **Yayın adresi:** [https://semracol.github.io/boekenleggers/](https://semracol.github.io/boekenleggers/)
 
-> Bu notlar hem daha önce yayına alınmış prototip sürümünü hem de mevcut yerel geliştirme çalışmasını içerir. 18:08'de istenen animasyon, yasal sayfalar ve onay akışı değişiklikleri henüz GitHub'a push edilmedi.
+## Huidig herontwerp
+
+- De homepage gebruikt nu een responsieve rail met de vier bestaande boekenleggerillustraties. De badges kunnen draaien en de rail ondersteunt toetsenbordnavigatie.
+- De bestaande productprijzen, winkelmand, cadeauactie, cookietoestemmingen en demo-checkout blijven behouden.
+- De winkel toont België en Nederland als bezorggebied; de homepage vermeldt €2,50 verzending voor 1–4 stuks en gratis verzending vanaf vijf.
+- GitHub Pages gebruikt de bestaande legacy-bron: de hoofdmap van de `main`-branch. De checkout blijft een demo; de juridische en bedrijfsgegevens moeten vóór echte verkoop worden ingevuld en gecontroleerd.
+
+> De onderstaande historische notities beschrijven eerdere updates en publicaties. De huidige homepage is opnieuw vormgegeven; deze release gebruikt dezelfde GitHub Pages-bron.
 
 ## Güncel yerel çalışma
 
