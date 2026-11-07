@@ -51,7 +51,8 @@ Deze versie combineert een warme papierkleur met diepe inktkleuren, productillus
 - `[ONDERNEMINGSNUMMER]` — actief KBO-ondernemingsnummer.
 - `[BTW-NUMMER]` of `[BTW-VRIJSTELLING INDIEN VAN TOEPASSING]` — bevestigde btw-status en correcte prijs-/factuurvermelding.
 - `[ADRES]` — officiële vestigings- en contactadres.
-- `[E-MAIL]` en `[TELEFOON]` — werkende klant- en privacycontactgegevens.
+- E-mailadres voor klant- en privacycontact: [boekenleggers.be@gmail.com](mailto:boekenleggers.be@gmail.com).
+- `[TELEFOON]` — werkend klant- en privacycontactnummer.
 - `[BETAALMETHODEN]` — gekozen betaalprovider(s) en juiste privacy-/betaalbeschrijvingen.
 - `[LEVERTERMIJN]`, `[VERWERKINGSTERMIJN]`, `[LEVERTERMIJN PER LAND]` — bevestigde verzend- en bezorgtermijnen.
 - `[RETOURADRES]` — adres voor herroepingen en retouren.

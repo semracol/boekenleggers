@@ -37,7 +37,7 @@
 - `[ONDERNEMINGSNUMMER]` (KBO)
 - `[BTW-NUMMER]` veya `[BTW-VRIJSTELLING INDIEN VAN TOEPASSING]`
 - `[ADRES]`
-- `[E-MAIL]`
+- Klant- en privacymeldingen kunnen worden gestuurd naar `boekenleggers.be@gmail.com`.
 - `[TELEFOON]`
 - `[BETAALMETHODEN]`
 - `[LEVERTERMIJN]`, `[VERWERKINGSTERMIJN]`, `[LEVERTERMIJN PER LAND]`
