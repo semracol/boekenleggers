@@ -16,7 +16,7 @@ Present illustrated bookmarks as small gifts and useful reading companions. Succ
 
 ## Positioning
 
-Four illustrated bookmark designs are presented as cheerful, giftable keepsakes for readers.
+Eighty-two illustrated bookmark designs are presented as cheerful, giftable keepsakes for readers.
 
 ## Operating Context
 
@@ -24,7 +24,7 @@ The site is a static GitHub Pages storefront. Visitors can browse products, add 
 
 ## Capabilities and Constraints
 
-- The site currently shows four bookmark designs at €4.50 each.
+- The site currently shows 82 bookmark designs at €4.50 each: four named designs and 78 catalog-coded designs from the user's image folder.
 - Shipping is presented as €2.50 per order for fewer than five bookmarks and free from five items.
 - A five-bookmark gift box is shown at €22.50; its demo action adds five copies of the first design.
 - The listed delivery area is Belgium and the Netherlands.
@@ -39,6 +39,7 @@ The existing shop name is Boekenleggers. The supplied redesign reference is an i
 ## Evidence on Hand
 
 - Product imagery: `assets/products/blue-hydrangea-bookmark.jpg`, `assets/products/heart-balloons-bookmark.jpg`, `assets/products/cat-reader-bookmark.jpg`, and `assets/products/winter-reindeer-bookmark.jpg`.
+- The 78 additional product images are named `assets/products/BM-*.jpg`; each visible product uses its source filename as its design identifier.
 - The existing HTML, JavaScript, README, and update notes describe the current product list, prices, delivery terms, demo cart, privacy behavior, and legal placeholders.
 - No real customer reviews or live checkout are available; do not imply otherwise.
 

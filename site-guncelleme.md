@@ -7,6 +7,8 @@
 ## Huidig herontwerp
 
 - De homepage gebruikt nu een responsieve rail met de vier bestaande boekenleggerillustraties. De badges kunnen draaien en de rail ondersteunt toetsenbordnavigatie.
+- De collectie bevat daarnaast alle 78 JPG-bestanden uit `ayraclar_ornek`: samen 82 ontwerpen, elk €4,50. De bestandsnaam dient als ontwerpnummer en alle bestanden staan lokaal in `assets/products/`.
+- Bezoekers kunnen op ontwerpnummer zoeken; alle 82 kaarten gebruiken de bestaande winkelmand en verzendvoorwaarden.
 - De bestaande productprijzen, winkelmand, cadeauactie, cookietoestemmingen en demo-checkout blijven behouden.
 - De winkel toont België en Nederland als bezorggebied; de homepage vermeldt €2,50 verzending voor 1–4 stuks en gratis verzending vanaf vijf.
 - GitHub Pages gebruikt de bestaande legacy-bron: de hoofdmap van de `main`-branch. De checkout blijft een demo; de juridische en bedrijfsgegevens moeten vóór echte verkoop worden ingevuld en gecontroleerd.

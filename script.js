@@ -15,6 +15,26 @@ const products = Object.fromEntries(
   }),
 );
 
+const catalogSearch = document.getElementById("catalogSearch");
+const catalogResultCount = document.getElementById("catalogResultCount");
+if (catalogSearch && catalogResultCount) {
+  catalogSearch.addEventListener("input", () => {
+    const query = catalogSearch.value.trim().toLocaleLowerCase("nl-BE");
+    const visibleCount = productCards.reduce((count, card) => {
+      const addButton = card.querySelector("[data-add-product]");
+      const searchableText = `${card.dataset.name} ${addButton.dataset.addProduct}`.toLocaleLowerCase("nl-BE");
+      const matches = searchableText.includes(query);
+      card.hidden = !matches;
+      if (matches) card.classList.add("is-visible");
+      return count + Number(matches);
+    }, 0);
+
+    catalogResultCount.textContent = visibleCount
+      ? `${visibleCount} ${visibleCount === 1 ? "ontwerp" : "ontwerpen"}`
+      : "Geen ontwerpen gevonden. Probeer een ander ontwerpnummer.";
+  });
+}
+
 const CART_KEY = "boekenleggers-cart-v1";
 const FREE_SHIPPING_QUANTITY = 5;
 const ITEM_PRICE_CENTS = 450;

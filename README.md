@@ -22,7 +22,7 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 - `robots.txt`, `sitemap.xml` — zoekmachine-instellingen
 - `assets/logo.svg`, `assets/logo-mark.svg`, `assets/logo-mark-mono.svg`, `assets/favicon.svg` — logo en favicon
 - `assets/fonts/` — lokaal gehoste Baloo 2- en Inter-lettertypen met OFL-licenties
-- `assets/products/` — Etsy klasöründen seçilen dört ürün fotoğrafı
+- `assets/products/` — de vier bestaande productfoto's en 78 extra boekenleggerontwerpen uit `ayraclar_ornek`
 - WhatsApp-contactknop op de winkel- en juridische pagina's, gekoppeld aan `+32 465 75 82 40`
 
 ## Seçilen tasarım yönü
@@ -30,7 +30,8 @@ Bu klasör, hediye odaklı kitap ayracı mağazasının analizlerini ve GitHub P
 Deze versie combineert een warme papierkleur met diepe inktkleuren, productillustraties en een interactieve rail die de boekenleggers centraal stelt:
 
 - warme papier- en inktkleuren met accenten uit de productillustraties
-- een interactieve, responsieve rail om de vier boekenleggerontwerpen te bekijken
+- een interactieve, responsieve rail met vier uitgelichte ontwerpen en een doorzoekbare catalogus met alle 82 ontwerpen
+- elk ontwerp kost €4,50; de 78 nieuw toegevoegde afbeeldingen staan lokaal onder `assets/products/BM-*.jpg`
 - cadeaubox voor vijf boekenleggers: €22,50
 - boekenleggerprijs: €4,50 per stuk
 - verzending: €2,50 per bestelling bij 1–4 stuks; gratis vanaf 5 stuks
